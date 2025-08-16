@@ -14,13 +14,13 @@ jobs:
     container:
       image: node:16
     env:
-      MONGODB_CONNECTION_PROTOCOL: mongodb+srv
-      MONGODB_CLUSTER_ADDRESS: cluster0.chomc.mongodb.net
+      MONGODB_CONNECTION_PROTOCOL: mongodb
+      MONGODB_CLUSTER_ADDRESS: mongodb
       MONGODB_USERNAME: root
       MONGODB_PASSWORD: example
       PORT: 8080
     services:
-      mangodb:
+      mongodb:
         image: mongo
         env:
           MONGO_INITDB_ROOT_USERNAME: root
